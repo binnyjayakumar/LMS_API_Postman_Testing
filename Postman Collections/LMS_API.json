@@ -186,22 +186,23 @@
 						{
 							"listen": "prerequest",
 							"script": {
+								"id": "90549c02-077d-485e-a788-314616661485",
 								"exec": [
 									"\r",
 									""
 								],
-								"type": "text/javascript",
-								"id": "90549c02-077d-485e-a788-314616661485"
+								"type": "text/javascript"
 							}
 						},
 						{
 							"listen": "test",
 							"script": {
+								"id": "219b27a4-d62d-4413-82c1-33d7dd9308a9",
 								"exec": [
 									"const response = pm.response.json();\r",
 									"const programId = response.programId;\r",
 									"const index = pm.info.iteration;\r",
-									"pm.collectionVariables.set(`programId_${index}`,programId);\r",
+									"pm.globals.set(`programId_${index}`,programId);\r",
 									"//pm.collectionVariables.set(\"programId\",response.programId)\r",
 									"//pm.collectionVariables.set(\"programName\",response.programName)\r",
 									"\r",
@@ -210,8 +211,7 @@
 									"    pm.response.to.have.status(statusCode)\r",
 									"});"
 								],
-								"type": "text/javascript",
-								"id": "219b27a4-d62d-4413-82c1-33d7dd9308a9"
+								"type": "text/javascript"
 							}
 						}
 					],
@@ -267,7 +267,7 @@
 									"const response = pm.response.json();",
 									"const programname = response.programName;",
 									"const index = pm.info.iteration;",
-									"pm.collectionVariables.set(`programName_${index}`,programname);"
+									"pm.globals.set(`programName_${index}`,programname);"
 								],
 								"type": "text/javascript"
 							}
@@ -565,7 +565,7 @@
 									"const response = pm.response.json();",
 									"const batchid = response.batchId;",
 									"const index = pm.info.iteration;",
-									"pm.collectionVariables.set(`batchId_${index}`,batchid);"
+									"pm.globals.set(`batchId_${index}`,batchid);"
 								],
 								"type": "text/javascript"
 							}
@@ -634,7 +634,7 @@
 									"const response = pm.response.json();",
 									"const batchname = response.batchName;",
 									"const index = pm.info.iteration;",
-									"pm.collectionVariables.set(`batchName_${index}`,batchname);"
+									"pm.globals.set(`batchName_${index}`,batchname);"
 								],
 								"type": "text/javascript"
 							}
