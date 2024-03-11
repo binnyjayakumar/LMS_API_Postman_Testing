@@ -900,7 +900,7 @@
 									"const response = pm.response.json();\r",
 									"const userId = response.userId;\r",
 									"const index = pm.info.iteration;\r",
-									"pm.collectionVariables.set(`userId_${index}`,userId);\r",
+									"pm.globals.set(`userId_${index}`,userId);\r",
 									"\r",
 									"\r",
 									"if (pm.response.code !== 201) {\r",
